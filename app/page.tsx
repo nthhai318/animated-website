@@ -1,57 +1,37 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
+import About from '../sections/About'
+import Explore from '../sections/Explore'
+import Feedback from '../sections/Feedback'
+import GetStarted from '../sections/GetStarted'
+import Hero from '../sections/Hero'
+import Insights from '../sections/Insights'
+import WhatsNew from '../sections/WhatsNew'
+import World from '../sections/World'
 
-export default function Home() {
+
+export default function Page() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 13!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://beta.nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js 13</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+    <div className='bg-primary-black overflow-hidden'>
+      <Navbar />
+      <Hero />
+      <div className='relative'>
+        <About />
+        <div className="gradient-03 z-0" />
+        <Explore />
+      </div>
+      <div className='relative'>
+        <GetStarted />
+        <div className="gradient-04 z-0" />
+        <WhatsNew />
+      </div>
+      <World />
+      <div className='relative'>
+        <Insights />
+        <div className="gradient-03 z-0" />
+        <Feedback />
+      </div>
+      <Footer />
     </div>
   )
 }
